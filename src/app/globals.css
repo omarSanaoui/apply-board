@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+/* dark mode */
+:root {
+  --background: #15161A;
+  --surface: #1D1F24;
+  --board: #1A1C21;
+  --border: #2B2E35;
+  --line: #2B2E35;
+  --row: #18191E;
+  --text: #E7E7EA;
+  --muted-text: #A2A3AB;
+  --accent: #7C93EA;
+  --on-accent: #12141C;
+  --glass: rgba(32, 34, 40, .5);
+  /* built-in column colors*/
+  --applied-solid: #7C93EA;
+  --applied-tint: #232A45;
+  --interview-solid: #E3B04B;
+  --interview-tint: #3A2F17;
+  --offer-solid: #5CC08A;
+  --offer-tint: #18342A;
+  --rejected-solid: #E07B73;
+  --rejected-tint: #3B2224;
+  /* custom column colors*/
+  /* violet */
+  --violet-solid: #A78BFA;
+  --violet-tint: #2A2145;
+  /* orchid */
+  --orchid-solid: #D58BE0;
+  --orchid-tint: #3A2142;
+  /* pink */
+  --pink-solid: #F08DB5;
+  --pink-tint: #3E2030;
+  /* teal */
+  --teal-solid: #4FC3C0;
+  --teal-tint: #17353A;
+  /* sky */
+  --sky-solid: #5BB8E8;
+  --sky-tint: #173446;
+  /* lime */
+  --lime-solid: #A7C957;
+  --lime-tint: #2B3416;
+  /* orange */
+  --orange-solid: #F09A5B;
+  --orange-tint: #3B2616;
+  /* coffee */
+  --coffee-solid: #C08B6B;
+  --coffee-tint: #35261D;
+  /* slate */
+  --slate-solid: #9AA5B8;
+  --slate-tint: #262B35;
+  /* stone */
+  --stone-solid: #B5A58F;
+  --stone-tint: #322C24;
+}
+
+:root[data-theme="dark"] {
+  --background: #15161A;
+  --surface: #1D1F24;
+  --board: #1A1C21;
+  --border: #2B2E35;
+  --line: #2B2E35;
+  --row: #18191E;
+  --text: #E7E7EA;
+  --muted-text: #A2A3AB;
+  --accent: #7C93EA;
+  --on-accent: #12141C;
+  --glass: rgba(32, 34, 40, .5);
+  --applied-solid: #7C93EA;
+  --applied-tint: #232A45;
+  --interview-solid: #E3B04B;
+  --interview-tint: #3A2F17;
+  --offer-solid: #5CC08A;
+  --offer-tint: #18342A;
+  --rejected-solid: #E07B73;
+  --rejected-tint: #3B2224;
+  /* custom column colors*/
+  /* violet */
+  --violet-solid: #A78BFA;
+  --violet-tint: #2A2145;
+  /* orchid */
+  --orchid-solid: #D58BE0;
+  --orchid-tint: #3A2142;
+  /* pink */
+  --pink-solid: #F08DB5;
+  --pink-tint: #3E2030;
+  /* teal */
+  --teal-solid: #4FC3C0;
+  --teal-tint: #17353A;
+  /* sky */
+  --sky-solid: #5BB8E8;
+  --sky-tint: #173446;
+  /* lime */
+  --lime-solid: #A7C957;
+  --lime-tint: #2B3416;
+  /* orange */
+  --orange-solid: #F09A5B;
+  --orange-tint: #3B2616;
+  /* coffee */
+  --coffee-solid: #C08B6B;
+  --coffee-tint: #35261D;
+  /* slate */
+  --slate-solid: #9AA5B8;
+  --slate-tint: #262B35;
+  /* stone */
+  --stone-solid: #B5A58F;
+  --stone-tint: #322C24;
+}
+
+/* light mode */
+:root[data-theme="light"] {
+  --background: #EEEDE7;
+  --surface: #FDFDFB;
+  --board: #EFEFEB;
+  --border: #c1c1bf;
+  --line: #E0E0DA;
+  --row: #EAEAE5;
+  --text: #1C1C1E;
+  --muted-text: #5C5C63;
+  --accent: #3A5BC7;
+  --on-accent: #FBFBFD;
+  --glass: rgba(253, 253, 251, .5);
+  --applied-solid: #3A5BC7;
+  --applied-tint: #E3E9FA;
+  --interview-solid: #C98A12;
+  --interview-tint: #F9EDD3;
+  --offer-solid: #2F8F5B;
+  --offer-tint: #DDF0E4;
+  --rejected-solid: #B4534D;
+  --rejected-tint: #F5E1DF;
+  /* custom column colors*/
+  /* violet */
+  --violet-solid: #6D4AD6;
+  --violet-tint: #ECE6FA;
+  /* orchid */
+  --orchid-solid: #A640B5;
+  --orchid-tint: #F5E3F8;
+  /* pink */
+  --pink-solid: #C23C77;
+  --pink-tint: #F9E2EC;
+  /* teal */
+  --teal-solid: #1F8A87;
+  --teal-tint: #D9F0EF;
+  /* sky */
+  --sky-solid: #1F7FB0;
+  --sky-tint: #DCEEF8;
+  /* lime */
+  --lime-solid: #6B8A1E;
+  --lime-tint: #EBF2D6;
+  /* orange */
+  --orange-solid: #C25E14;
+  --orange-tint: #FAE6D4;
+  /* coffee */
+  --coffee-solid: #8F5A3A;
+  --coffee-tint: #F0E3DA;
+  /* slate */
+  --slate-solid: #5B6679;
+  --slate-tint: #E4E7ED;
+  /* stone */
+  --stone-solid: #7D6B52;
+  --stone-tint: #EDE7DD;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --background: #EEEDE7;
+    --surface: #FDFDFB;
+    --board: #EFEFEB;
+    --border: #c1c1bf;
+    --line: #E0E0DA;
+    --row: #EAEAE5;
+    --text: #1C1C1E;
+    --muted-text: #5C5C63;
+    --accent: #3A5BC7;
+    --on-accent: #FBFBFD;
+    --glass: rgba(253, 253, 251, .5);
+    --applied-solid: #3A5BC7;
+    --applied-tint: #E3E9FA;
+    --interview-solid: #C98A12;
+    --interview-tint: #F9EDD3;
+    --offer-solid: #2F8F5B;
+    --offer-tint: #DDF0E4;
+    --rejected-solid: #B4534D;
+    --rejected-tint: #F5E1DF;
+    /* custom column colors*/
+    /* violet */
+    --violet-solid: #6D4AD6;
+    --violet-tint: #ECE6FA;
+    /* orchid */
+    --orchid-solid: #A640B5;
+    --orchid-tint: #F5E3F8;
+    /* pink */
+    --pink-solid: #C23C77;
+    --pink-tint: #F9E2EC;
+    /* teal */
+    --teal-solid: #1F8A87;
+    --teal-tint: #D9F0EF;
+    /* sky */
+    --sky-solid: #1F7FB0;
+    --sky-tint: #DCEEF8;
+    /* lime */
+    --lime-solid: #6B8A1E;
+    --lime-tint: #EBF2D6;
+    /* orange */
+    --orange-solid: #C25E14;
+    --orange-tint: #FAE6D4;
+    /* coffee */
+    --coffee-solid: #8F5A3A;
+    --coffee-tint: #F0E3DA;
+    /* slate */
+    --slate-solid: #5B6679;
+    --slate-tint: #E4E7ED;
+    /* stone */
+    --stone-solid: #7D6B52;
+    --stone-tint: #EDE7DD;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-board: var(--board);
+  --color-border: var(--border);
+  --color-line: var(--line);
+  --color-row: var(--row);
+  --color-text: var(--text);
+  --color-muted-text: var(--muted-text);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-glass: var(--glass);
+  --color-applied-solid: var(--applied-solid);
+  --color-applied-tint: var(--applied-tint);
+  --color-interview-solid: var(--interview-solid);
+  --color-interview-tint: var(--interview-tint);
+  --color-offer-solid: var(--offer-solid);
+  --color-offer-tint: var(--offer-tint);
+  --color-rejected-solid: var(--rejected-solid);
+  --color-rejected-tint: var(--rejected-tint);
+  /* custom column colors*/
+  --color-violet-solid: var(--violet-solid);
+  --color-violet-tint: var(--violet-tint);
+  --color-orchid-solid: var(--orchid-solid);
+  --color-orchid-tint: var(--orchid-tint);
+  --color-pink-solid: var(--pink-solid);
+  --color-pink-tint: var(--pink-tint);
+  --color-teal-solid: var(--teal-solid);
+  --color-teal-tint: var(--teal-tint);
+  --color-sky-solid: var(--sky-solid);
+  --color-sky-tint: var(--sky-tint);
+  --color-lime-solid: var(--lime-solid);
+  --color-lime-tint: var(--lime-tint);
+  --color-orange-solid: var(--orange-solid);
+  --color-orange-tint: var(--orange-tint);
+  --color-coffee-solid: var(--coffee-solid);
+  --color-coffee-tint: var(--coffee-tint);
+  --color-slate-solid: var(--slate-solid);
+  --color-slate-tint: var(--slate-tint);
+  --color-stone-solid: var(--stone-solid);
+  --color-stone-tint: var(--stone-tint);
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-inter);
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
