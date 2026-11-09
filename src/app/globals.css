@@ -7,12 +7,32 @@
   --board: #1A1C21;
   --border: #2B2E35;
   --line: #2B2E35;
+  /* inputs, selects, code boxes: a stronger edge than --border */
+  --input-border: #3A3D46;
+  /* input and secondary button border on hover */
+  --border-hover: #545761;
+  /* background on hover: ghost and icon buttons, menu items, nav links */
+  --hover: #262830;
+  /* count badges, selected view tab, active nav link */
+  --chip: #262830;
+  /* left section list in settings */
+  --sidebar: #1A1C21;
   --row: #18191E;
   --text: #E7E7EA;
   --muted-text: #A2A3AB;
+  /* role, date and work mode on cards (--muted-text is too faint on the tints) */
+  --card-sub: #B9BAC2;
+  /* placeholder text in inputs */
+  --placeholder: #8A8A92;
+  /* input border when focused */
+  --focus: #5B77D8;
+  /* 3px glow around a focused input */
+  --focus-ring: rgba(91, 119, 216, .25);
   --accent: #7C93EA;
   --on-accent: #12141C;
   --glass: rgba(32, 34, 40, .5);
+  /* alias, follows the theme by itself: errors, error borders, delete buttons */
+  --danger: var(--rejected-solid);
   /* built-in column colors*/
   --applied-solid: #7C93EA;
   --applied-tint: #232A45;
@@ -61,9 +81,27 @@
   --board: #1A1C21;
   --border: #2B2E35;
   --line: #2B2E35;
+  /* inputs, selects, code boxes: a stronger edge than --border */
+  --input-border: #3A3D46;
+  /* input and secondary button border on hover */
+  --border-hover: #545761;
+  /* background on hover: ghost and icon buttons, menu items, nav links */
+  --hover: #262830;
+  /* count badges, selected view tab, active nav link */
+  --chip: #262830;
+  /* left section list in settings */
+  --sidebar: #1A1C21;
   --row: #18191E;
   --text: #E7E7EA;
   --muted-text: #A2A3AB;
+  /* role, date and work mode on cards (--muted-text is too faint on the tints) */
+  --card-sub: #B9BAC2;
+  /* placeholder text in inputs */
+  --placeholder: #8A8A92;
+  /* input border when focused */
+  --focus: #5B77D8;
+  /* 3px glow around a focused input */
+  --focus-ring: rgba(91, 119, 216, .25);
   --accent: #7C93EA;
   --on-accent: #12141C;
   --glass: rgba(32, 34, 40, .5);
@@ -110,14 +148,32 @@
 
 /* light mode */
 :root[data-theme="light"] {
-  --background: #EEEDE7;
+  --background: #F7F7F5;
   --surface: #FDFDFB;
   --board: #EFEFEB;
   --border: #c1c1bf;
   --line: #E0E0DA;
+  /* inputs, selects, code boxes: a stronger edge than --border */
+  --input-border: #C1C1BF;
+  /* input and secondary button border on hover */
+  --border-hover: #A3A3A1;
+  /* background on hover: ghost and icon buttons, menu items, nav links */
+  --hover: #E7E6E0;
+  /* count badges, selected view tab, active nav link */
+  --chip: #DEDDD6;
+  /* left section list in settings */
+  --sidebar: #F6F5F1;
   --row: #EAEAE5;
   --text: #1C1C1E;
   --muted-text: #5C5C63;
+  /* role, date and work mode on cards (--muted-text is too faint on the tints) */
+  --card-sub: #4A4A52;
+  /* placeholder text in inputs */
+  --placeholder: #8A8A92;
+  /* input border when focused */
+  --focus: #5B77D8;
+  /* 3px glow around a focused input */
+  --focus-ring: rgba(91, 119, 216, .25);
   --accent: #3A5BC7;
   --on-accent: #FBFBFD;
   --glass: rgba(253, 253, 251, .5);
@@ -164,14 +220,32 @@
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --background: #EEEDE7;
+    --background: #F7F7F5;
     --surface: #FDFDFB;
     --board: #EFEFEB;
     --border: #c1c1bf;
     --line: #E0E0DA;
+    /* inputs, selects, code boxes: a stronger edge than --border */
+    --input-border: #C1C1BF;
+    /* input and secondary button border on hover */
+    --border-hover: #A3A3A1;
+    /* background on hover: ghost and icon buttons, menu items, nav links */
+    --hover: #E7E6E0;
+    /* count badges, selected view tab, active nav link */
+    --chip: #DEDDD6;
+    /* left section list in settings */
+    --sidebar: #F6F5F1;
     --row: #EAEAE5;
     --text: #1C1C1E;
     --muted-text: #5C5C63;
+    /* role, date and work mode on cards (--muted-text is too faint on the tints) */
+    --card-sub: #4A4A52;
+    /* placeholder text in inputs */
+    --placeholder: #8A8A92;
+    /* input border when focused */
+    --focus: #5B77D8;
+    /* 3px glow around a focused input */
+    --focus-ring: rgba(91, 119, 216, .25);
     --accent: #3A5BC7;
     --on-accent: #FBFBFD;
     --glass: rgba(253, 253, 251, .5);
@@ -223,9 +297,19 @@
   --color-board: var(--board);
   --color-border: var(--border);
   --color-line: var(--line);
+  --color-input-border: var(--input-border);
+  --color-border-hover: var(--border-hover);
+  --color-hover: var(--hover);
+  --color-chip: var(--chip);
+  --color-sidebar: var(--sidebar);
   --color-row: var(--row);
   --color-text: var(--text);
   --color-muted-text: var(--muted-text);
+  --color-card-sub: var(--card-sub);
+  --color-placeholder: var(--placeholder);
+  --color-focus: var(--focus);
+  --color-focus-ring: var(--focus-ring);
+  --color-danger: var(--danger);
   --color-accent: var(--accent);
   --color-on-accent: var(--on-accent);
   --color-glass: var(--glass);

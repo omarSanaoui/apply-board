@@ -29,9 +29,9 @@ export default function ApplicationCard({application,status}:CardProps) {
         <div className={`flex flex-col gap-3 w-full max-w-56 rounded-[10px] px-3 py-4 ${cardStyle}`}>
             <div className="flex flex-col">
                 <span className="font-semibold text-[14px]">{application.company}</span>
-                <span className="text-[13px] text-muted-text">{application.position}</span>
+                <span className="text-[13px] text-card-sub">{application.position}</span>
             </div>
-            <div className="flex gap-2 justify-between font-medium text-[12px] text-muted-text">
+            <div className="flex gap-2 justify-between font-medium text-[12px] text-card-sub">
                 <p>{lastEntry.label ? lastEntry.label + ' · ' : ''}{lastEntry.date}</p>
                 <p>{application.workMode}</p>
             </div>
