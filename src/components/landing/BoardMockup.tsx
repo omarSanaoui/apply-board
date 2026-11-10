@@ -44,7 +44,7 @@ export default function BoardMockup() {
                         <div className="rounded-[10px] bg-rejected-tint/80 outline-2 -outline-offset-2 outline-dashed outline-rejected-solid">
                             <div className="relative -top-6 -right-56 rotate-4">
                                 <ApplicationCard application={flying} status={rejected} />
-                                <MousePointer2 size={22} className="fill-background text-text absolute  bottom-3 right-20" />
+                                <MousePointer2 size={22} className="fill-background text-text absolute bottom-3 right-20" />
                             </div>
                         </div>
                         {rest.map((application) => <ApplicationCard key={application.id} application={application} status={rejected} />)}
